@@ -34,8 +34,8 @@
 
 <ul>
     <li><strong>Diseño Responsivo:</strong> La aplicación está diseñada para funcionar perfectamente en diferentes dispositivos y tamaños de pantalla, proporcionando una experiencia de usuario consistente.</li>
-    <li><strong></strong></li>
-    <li><strong></strong></li>
+    <li><strong>Animaciones con jQuery:</strong> La aplicación utiliza jQuery para implementar animaciones suaves y dinámicas que mejoran la interacción del usuario y hacen la experiencia más atractiva.</li>
+    <li><strong>Manejo de JavaScript para funciones:</strong> La aplicación emplea JavaScript para gestionar diversas funciones y características, asegurando una funcionalidad robusta y eficiente en todo momento.</li>
 </ul>
 
 <h2>Tecnologías Utilizadas</h2>
