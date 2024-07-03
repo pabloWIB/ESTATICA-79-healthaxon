@@ -1,7 +1,5 @@
 <img src="IMG/102shots_so.jpeg" alt="">
 
-<h2 align="center">Diseño Figma: <a href="">Maquetado en Figma</a></h2>
-
 <h2 align="center">Página: <a href=""></a><span>Aún no disponible</span></h2>
 
 <h2 >Tecnologías usadas👨🏻‍💻</h2>
@@ -18,18 +16,19 @@
 <h4>Apps:</h4>
 <img src="https://skillicons.dev/icons?i=figma" />
 
-<h1>(Título)</h1>
+<h1>healthaxon</h1>
 
-<p>Bienvenido a (Nombre del proyecto) frontend project, diseñado por Pablo Nieto (GitHub: <a href="https://github.com/pabloWIB">pabloWIB</a>)</p>
+<p>Bienvenido a healthaxon frontend project, diseñado por Pablo Nieto (GitHub: <a href="https://github.com/pabloWIB">pabloWIB</a>)</p>
 
 <a href="https://www.linkedin.com/in/pablo-nieto-perez-39a530292/" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Pablo Nieto"/></a>
 
 <a href="https://www.fiverr.com/pablonietop?source=gig_page" target="blank"><img align="center" src="https://img.shields.io/badge/fiverr-1DBF73?style=for-the-badge&logo=fiverr&logoColor=white" alt="@FiverrPablo"  /></a>
 
-
 <h2>Resumen</h2>
 
-<p>De que va la página</p>
+<p>HealthAxon es una organización con sede en el Reino Unido que realiza inversiones en la felicidad. Cuantificamos tanto los retornos sociales como financieros generados por nuestras inversiones, con una cartera compuesta por servicios sostenibles de salud y cuidado social. Nuestros clientes incluyen autoridades locales, el NHS y particulares. <br> Pensamos de manera holística sobre los retornos y creemos en crear un impacto duradero y escalable basado en nuestros valores, alineando a las partes interesadas.
+
+</p>
 
 <h2>Características</h2>
 
