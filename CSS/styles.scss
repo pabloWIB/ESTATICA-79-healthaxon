@@ -10,3 +10,12 @@ body{
     font-family: "Libre Baskerville", serif;
     background: $grisFondo;
 }
+
+.nectar-lottie{
+    width: 100%;
+    max-width: 350px;
+    svg{
+        width: 100%;
+        height: 100%;
+    }
+}
