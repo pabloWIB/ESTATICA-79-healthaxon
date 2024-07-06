@@ -4,7 +4,160 @@ body {
   background: #F6F3F0;
 }
 
+.bodyToggle {
+  overflow: hidden;
+}
+
+.toggleMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #F6F3F0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.toggleMenu > :nth-child(1) {
+  width: 87.25%;
+  max-width: 1200px;
+  height: 95%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 20%;
+}
+.toggleMenu > :nth-child(1) > :nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.toggleMenu > :nth-child(1) > :nth-child(1) > :nth-child(1) > div {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin-top: 20px;
+}
+.toggleMenu > :nth-child(1) > :nth-child(1) > :nth-child(1) > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 0.15rem;
+}
+.toggleMenu > :nth-child(1) > :nth-child(1) > :nth-child(1) > div > div > div a {
+  all: unset;
+  font-size: 30px;
+  cursor: pointer;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  font-weight: 500;
+}
+.toggleMenu > :nth-child(1) > :nth-child(1) > :nth-child(1) > div > div > div a:hover {
+  color: #4C9082;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+.toggleMenu > :nth-child(1) > :nth-child(1) > :nth-child(1) > div > div > :nth-child(2) {
+  height: 2px;
+  width: 0%;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  background: #4C9082;
+}
+.toggleMenu > :nth-child(1) > :nth-child(1) > :nth-child(1) > div > div:hover > :nth-child(2) {
+  background: #4C9082;
+  width: 100%;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+.toggleMenu > :nth-child(1) > :nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.toggleMenu > :nth-child(1) > :nth-child(2) > div p, .toggleMenu > :nth-child(1) > :nth-child(2) > div a {
+  all: unset;
+  font-size: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "arial";
+  color: #3e3e3e;
+}
+.toggleMenu > :nth-child(1) > :nth-child(2) > div a {
+  cursor: pointer;
+}
+.toggleMenu > :nth-child(1) > :nth-child(2) > :nth-child(2) {
+  text-align: center;
+}
+
+.toggleMenuActive {
+  visibility: visible;
+  opacity: 1;
+}
+.toggleMenuActive > :nth-child(1) {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 100%;
+}
+
 nav {
+  width: 100%;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  background: #F6F3F0;
+  z-index: 11;
+}
+nav > :nth-child(1) {
   width: 87.25%;
   max-width: 1200px;
   display: -webkit-box;
@@ -21,20 +174,20 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 28px;
-}
-nav > :nth-child(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 1.75rem 0rem;
 }
 nav > :nth-child(1) > :nth-child(1) {
-  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-nav > :nth-child(1) > :nth-child(1) img {
+nav > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+  width: 196px;
+}
+nav > :nth-child(1) > :nth-child(1) > :nth-child(1) img {
   width: 100%;
 }
-nav > :nth-child(2) {
+nav > :nth-child(1) > :nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +197,7 @@ nav > :nth-child(2) {
           flex-flow: column wrap;
   gap: 1rem;
 }
-nav > :nth-child(2) > :nth-child(1) {
+nav > :nth-child(1) > :nth-child(2) > :nth-child(1) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,18 +205,22 @@ nav > :nth-child(2) > :nth-child(1) {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  gap: 0.4rem;
+  gap: 0.35rem;
   cursor: pointer;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-nav > :nth-child(2) > :nth-child(1) span {
-  width: 50px;
+nav > :nth-child(1) > :nth-child(2) > :nth-child(1) span {
+  width: 100%;
+  max-width: 52.5px;
   height: 2px;
   background: black;
 }
-nav > :nth-child(2) > :nth-child(1):hover span {
-  background: red;
+nav > :nth-child(1) > :nth-child(2) > :nth-child(1):hover span {
+  background: #4C9082;
 }
-nav > :nth-child(2) > :nth-child(2) {
+nav > :nth-child(1) > :nth-child(2) > :nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,10 +229,54 @@ nav > :nth-child(2) > :nth-child(2) {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   gap: 1rem;
-  display: none;
 }
-nav > :nth-child(2) > :nth-child(2) span {
-  width: 50px;
+nav > :nth-child(1) > :nth-child(2) > :nth-child(2) span {
+  width: 52.5px;
   height: 2px;
   background: black;
+}
+
+.navSroll {
+  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.navSroll > :nth-child(1) {
+  padding: 1.4rem 0rem;
+}
+
+.navIDtoggleMenuActive {
+  background: transparent;
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+.navIDtoggleMenuActive > :nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(1), .navIDtoggleMenuActive > :nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+  width: 0%;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.navIDtoggleMenuActive > :nth-child(1) > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+@media (max-width: 300px) {
+  nav > :nth-child(1) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    gap: 1rem;
+  }
+}
+header {
+  margin-top: 120px;
+  text-align: center;
+}
+header h2 {
+  all: unset;
+  font-size: 35px;
+  line-height: 50px;
+  font-weight: 500;
 }
