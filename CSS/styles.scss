@@ -20,6 +20,38 @@ body{
 
 // BODY ---
 
+// progress
+
+.progress {
+    position: fixed;
+    width: .5%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 12;
+    #progress-container {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        #progress-bar {
+            width: 100%;
+            height: 2%;
+            background: $verde;
+            transform-origin: top;
+        }
+    }
+}
+
+// progress-deactivate ---
+
+.progressDeactivate{
+    display: none;
+}
+
+// progress-deactivate ---
+
+// progress ---
+
 // toggleMenu
 
 .toggleMenu{
@@ -59,6 +91,7 @@ body{
                         display: flex;
                         flex-flow: column wrap;
                         gap: .15rem;
+                        cursor: pointer;
                         >div{
                             a{
                                 all: unset;
@@ -81,6 +114,9 @@ body{
                         }
                     }
                     >div:hover{
+                        a{
+                            color: $verde;
+                        }
                         >:nth-child(2){
                             background: $verde;
                             width: 100%;
@@ -105,6 +141,12 @@ body{
                 }
                 a{
                     cursor: pointer;
+                }
+                p{
+                    cursor: default;
+                }
+                p::selection{
+                    background: none;
                 }
             }
             >:nth-child(2){
@@ -183,7 +225,6 @@ nav{
     background: $grisFondo;
     z-index: 11;
     transform: translateY(-70%);
-    opacity: 0;
     >:nth-child(1){
         width: 87.25%;
         max-width: 1200px;
@@ -220,6 +261,7 @@ nav{
                     width: 52.5px;
                     height: 2.75px;
                     background: black;
+                    border-radius: 8px;
                 }
                 >:nth-child(1){
                     transition: .3s;
@@ -235,10 +277,7 @@ nav{
                 place-content: center;
                 position: absolute;
                 gap: 0rem;
-                visibility: hidden;
-                opacity: 0;
                 transition-delay: 0s;
-                transition: 0s;
                 >:nth-child(1), >:nth-child(2){
                     position: relative;
                     display: flex;
@@ -247,14 +286,15 @@ nav{
                         background: $verde;
                         height: 3px;
                         width: 0%;
-                        transition: .5s;
+                        transition: .2s;
+                        border-radius: 8px;
                     }
                 }
                 >:nth-child(1){
-                    transform: rotate(135deg) scale(1) translateX(2.75px) translateY(-1px) scale(.75);
+                    transform: rotate(135deg) translateX(2.75px) translateY(-1px) scale(.75);
                 }
                 >:nth-child(2){
-                    transform: rotate(-135deg) scale(1) translateY(0px) scale(.75);
+                    transform: rotate(-135deg) translateY(0px) scale(.75);
                 }
             }
         }
@@ -262,13 +302,6 @@ nav{
             >div{
                 span{
                     background: $verde;
-                    transition: .3s;
-                }
-            }
-            >:nth-child(2){
-                transition: .3s;
-                div{
-                    transition: 0s;
                 }
             }
         }
@@ -300,7 +333,7 @@ nav{
 
 .navIDtoggleMenuActive{
     background: $grisFondo;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
     >:nth-child(1){
         >:nth-child(2){
             >:nth-child(1){
@@ -310,22 +343,16 @@ nav{
                 }
             }
             >:nth-child(2){
-                visibility: visible;
-                opacity: 1;
                 transition-delay: .15s;
-                display: flex;
-                flex-flow: row wrap;
-                >:nth-child(1){
+                >:nth-child(1), >:nth-child(2){
                     div{
                         width: 100%;
                         transition: .65s;
-                        transition-delay: .2s;
                     }
                 }
-                >:nth-child(2){
+                >:nth-child(1){
                     div{
-                        width: 100%;
-                        transition: .65s;
+                        transition-delay: .2s;
                     }
                 }
             }
@@ -359,13 +386,16 @@ header{
     max-width: 1200px;
     display: flex;
     flex-flow: column wrap;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
-    margin-top: 110px;
+    margin-top: 100px;
     >:nth-child(1){
+        transform: translateY(5%);
+        opacity: 0;
+        transition: .5s;
         h1{
             all: unset;
-            font-size: 35px;
+            font-size: 33.5px;
             line-height: 45px;
             font-weight: 500;
         }
@@ -374,9 +404,12 @@ header{
         display: flex;
         flex-flow: column wrap;
         align-items: center;
+        transform: scale(.85);
+        opacity: 0;
+        transition: .5s;
         >:nth-child(1){
             width: 100%;
-            max-width: 1200px;
+            max-width: 900px;
             video{
                 width: 100%;
             }
@@ -391,6 +424,22 @@ header{
         }
     }
 }
+
+// navigationIDAnimation
+
+.headerIDAnimation{
+    >:nth-child(1){
+        transform: translateY(0%);
+        opacity: 100;
+    }
+    >:nth-child(2){
+        transform: scale(1);
+        opacity: 100;
+    }
+}
+
+// navigationIDAnimation ---
+
 
 // HEADER MEDIA
 
@@ -431,3 +480,41 @@ header{
 // HEADER MEDIA ---
 
 // HEADER ---
+
+// SECTION
+
+section{
+    width: 87.5%;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 100px;
+    >:nth-child(1){
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+        h2,p{
+            all: unset;
+        }
+        h2{
+            font-size: 33.5px;
+            font-weight: 500;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 26.5px;
+            font-size: 17px;
+            color: rgb(44, 44, 44);
+        }
+    }
+    >:nth-child(2){
+
+    }
+}
+
+// SECTION ---

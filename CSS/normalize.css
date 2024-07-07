@@ -7,3 +7,12 @@ img::selection, span::selection, div::selection, button::selection, br::selectio
 *{
   transition: .3s;
 }
+
+body::-webkit-scrollbar{display: none;} 
+/* Chrome, Safari, Opera */
+
+body {-ms-overflow-style: none;} 
+/* IE & Edge */
+
+html {scrollbar-width: none;} 
+/* Firefox */

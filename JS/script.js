@@ -22,6 +22,16 @@ $(function(){
 
 // NAV LOAD ANIMATION ---
 
+// HEADER LOAD ANIMATION
+
+$(function(){
+    setTimeout(function(){
+        $("#headerID").addClass("headerIDAnimation");
+    }, 500);
+});
+
+// HEADER LOAD ANIMATION ---
+
 // ONSCROLL NAV ANIMATION  
 
 function scrollValue() {
@@ -44,16 +54,15 @@ $(function() {
         $("#toggleMenu").toggleClass("toggleMenuActive");
         $("#bodyID").toggleClass("bodyToggle");
         $("#navID").toggleClass("navIDtoggleMenuActive");
+        $("#progress").toggleClass("progressDeactivate");
     });
 
-    // Function to remove class "pene" from #navID
     function removeToggleClass() {
         $("#toggleMenu").removeClass("toggleMenuActive");
         $("#bodyID").removeClass("bodyToggle");
-        $("#navID").removeClass("navIDtoggleMenuActive");
+        $("#progress").removeClass("progressDeactivate");
     }
 
-    // Click handlers to call the function
     $("#headerIDCloseA, #sectionIDCloseA, #mainIDCloseA, #asideIDCloseA, #articleIDCloseA, #footerIDCloseA").click(function(e) {
         removeToggleClass();
     });
@@ -61,3 +70,14 @@ $(function() {
 
 // MENU TOGGLE ---
 
+// PROGRESS BAR
+
+window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercentage = (scrollTop / docHeight) * 100;
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.height = scrollPercentage + '%';
+});
+
+// PROGRESS BAR ---
