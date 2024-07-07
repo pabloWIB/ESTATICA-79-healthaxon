@@ -12,6 +12,16 @@ const footerID = document.getElementById('footerID');
 
 // DEFINIR ID's ---
 
+// NAV LOAD ANIMATION
+
+$(function(){
+    setTimeout(function(){
+        $("#navID").addClass("navigationIDAnimation");
+    }, 350);
+});
+
+// NAV LOAD ANIMATION ---
+
 // ONSCROLL NAV ANIMATION  
 
 function scrollValue() {
@@ -41,7 +51,6 @@ $(function() {
         $("#toggleMenu").removeClass("toggleMenuActive");
         $("#bodyID").removeClass("bodyToggle");
         $("#navID").removeClass("navIDtoggleMenuActive");
-        alert("Hola");
     }
 
     // Click handlers to call the function
@@ -51,3 +60,4 @@ $(function() {
 });
 
 // MENU TOGGLE ---
+
