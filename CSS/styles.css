@@ -513,8 +513,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
-  margin-top: 100px;
+  gap: 5rem;
+  margin-top: 150px;
 }
 section > :nth-child(1) {
   display: -webkit-box;
@@ -529,6 +529,8 @@ section > :nth-child(1) {
           align-items: center;
   gap: 1.5rem;
   text-align: center;
+  margin: 0 auto;
+  width: 71%;
 }
 section > :nth-child(1) h2, section > :nth-child(1) p {
   all: unset;
@@ -542,4 +544,174 @@ section > :nth-child(1) p {
   line-height: 26.5px;
   font-size: 17px;
   color: rgb(44, 44, 44);
+}
+section > :nth-child(1) .sectionTextLock {
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+section > :nth-child(1) .animationN1 {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 100%;
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+section > :nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section > :nth-child(2) > :nth-child(1) {
+  width: 80%;
+  max-width: 900px;
+}
+section > :nth-child(2) > :nth-child(1) video {
+  width: 100%;
+}
+section > :nth-child(2) > :nth-child(2) {
+  display: none;
+  width: 100%;
+  max-width: 900px;
+}
+section > :nth-child(2) > :nth-child(2) img {
+  width: 100%;
+}
+
+@media (max-width: 710px) {
+  section {
+    gap: 2rem;
+    margin-top: 50px;
+  }
+  section > :nth-child(1) {
+    width: 100%;
+  }
+  section > :nth-child(1) h2 {
+    font-size: 22.5px;
+  }
+  section > :nth-child(1) p {
+    font-size: 16px;
+  }
+  section > :nth-child(2) > :nth-child(1) {
+    display: none;
+  }
+  section > :nth-child(2) > :nth-child(2) {
+    display: block;
+  }
+}
+@media (max-width: 460px) {
+  section > :nth-child(1) h2 {
+    font-size: 18px;
+  }
+  section > :nth-child(1) p {
+    font-size: 15px;
+  }
+}
+main {
+  width: 87.5%;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+  margin-top: 150px;
+}
+main > :nth-child(1) {
+  text-align: center;
+}
+main > :nth-child(1) h3 {
+  all: unset;
+  font-size: 33.5px;
+}
+main > :nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  gap: 1.35rem;
+}
+main > :nth-child(2) > div {
+  background: #F8EBBF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 2.5rem 0rem;
+}
+main > :nth-child(2) > div h3, main > :nth-child(2) > div p {
+  all: unset;
+}
+main > :nth-child(2) > div h3 {
+  font-weight: 400;
+  font-size: 70px;
+}
+main > :nth-child(2) > div p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #252525;
+}
+
+@media (max-width: 900px) {
+  main {
+    gap: 2.5rem;
+    margin-top: 75px;
+  }
+  main > :nth-child(1) h3 {
+    all: unset;
+    font-size: 22.5px;
+  }
+  main > :nth-child(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    width: 100%;
+    gap: 1rem;
+  }
+  main > :nth-child(2) > div {
+    width: 100%;
+    gap: 1.5rem;
+    padding: 2.5rem 0rem;
+  }
+  main > :nth-child(2) > div h3 {
+    font-size: 50px;
+  }
+  main > :nth-child(2) > div p {
+    font-size: 16px;
+  }
 }
