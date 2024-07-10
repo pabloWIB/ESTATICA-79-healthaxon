@@ -374,7 +374,7 @@ const people4 = document.getElementById('people4');
 const people5 = document.getElementById('people5');
 const people6 = document.getElementById('people6');
 const asideTxtAnim = document.getElementById('asideTxtAnim');
-const asideTxtAnim2 = document.getElementById('articleTxtAnim');
+const asideTxtAnim2 = document.getElementById('asideTxtAnim2');
 
 function scrollValue3() {
     var scroll = window.scrollY;
@@ -396,4 +396,21 @@ function scrollValue3() {
 window.addEventListener('scroll', scrollValue3);
 
 // RESET VIEWPORT ANIMATIONS ---
+
+// GETTOP
+
+const getTop = document.getElementById('getTop');
+
+function scrollValue4() {
+    var scroll = window.scrollY;
+    if (scroll > 200) {
+        getTop.classList.add('animatioGetTop');
+    } else if (scroll < 100){
+        getTop.classList.remove('animatioGetTop');
+    }
+}
+
+window.addEventListener('scroll', scrollValue4);
+
+// GETTOP ---
 

@@ -10,13 +10,46 @@ body {
 
 .getTop {
   position: fixed;
-  right: 1.5%;
-  bottom: 2%;
+  right: 2%;
+  bottom: 2.5%;
+  z-index: 20;
   border-radius: 50%;
-  background: #252525;
+  background: #B8B7B5;
   cursor: pointer;
   height: 30px;
   width: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  place-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.getTop > a {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: relative;
+}
+.getTop > a > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +58,65 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.getTop > a > div div {
+  width: 100%;
+  max-width: 25px;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+.getTop > a > div div img {
+  width: 100%;
+}
+.getTop > a > :nth-child(1) {
+  z-index: 40;
+}
+.getTop > a > :nth-child(2) {
+  background: #4C9082;
+  scale: 0;
+}
+.getTop > a > :nth-child(2) div {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  scale: 1;
+}
 
+.getTop:hover > a > :nth-child(1) {
+  scale: 0;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+.getTop:hover > a > :nth-child(1) div {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+.getTop:hover > a > :nth-child(2) {
+  background: #4C9082;
+  scale: 1;
+}
+.getTop:hover > a > :nth-child(2) div {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.animatioGetTop {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 710px) {
+  .getTop {
+    display: none;
+  }
+  .animatioGetTop {
+    display: none;
+  }
+}
 .progress {
   position: fixed;
   width: 0.5%;
@@ -1036,5 +1127,205 @@ article > :nth-child(2) > div .animationPeople {
   }
   article > :nth-child(2) > div > div p {
     font-size: 16px;
+  }
+}
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin-top: 150px;
+  gap: 5rem;
+}
+footer > :nth-child(1) {
+  margin: 0 auto;
+  width: 87.5%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  position: relative;
+}
+footer > :nth-child(1) > :nth-child(1) {
+  width: 100%;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+  width: 100%;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(1) video {
+  width: 100%;
+}
+footer > :nth-child(1) > :nth-child(1) > :nth-child(2) {
+  display: none;
+}
+footer > :nth-child(1) > :nth-child(2) {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(1) {
+  width: 100%;
+  max-width: 500px;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(1) img {
+  width: 100%;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 1.5rem;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(2) h3, footer > :nth-child(1) > :nth-child(2) > :nth-child(2) p, footer > :nth-child(1) > :nth-child(2) > :nth-child(2) a {
+  all: unset;
+  color: #252525;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(2) h3 {
+  font-size: 32.5px;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(2) p, footer > :nth-child(1) > :nth-child(2) > :nth-child(2) a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+footer > :nth-child(1) > :nth-child(2) > :nth-child(2) a {
+  cursor: pointer;
+  color: #4C9082;
+}
+
+@media (max-width: 710px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    gap: 5rem;
+  }
+  footer > :nth-child(1) {
+    margin: 0 auto;
+    width: 87.5%;
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+  footer > :nth-child(1) > :nth-child(1) > :nth-child(1) {
+    display: none;
+  }
+  footer > :nth-child(1) > :nth-child(2) {
+    gap: 1rem;
+  }
+  footer > :nth-child(1) > :nth-child(2) > :nth-child(1) {
+    width: 100%;
+    max-width: 300px;
+  }
+  footer > :nth-child(1) > :nth-child(2) > :nth-child(1) img {
+    width: 100%;
+  }
+  footer > :nth-child(1) > :nth-child(2) > :nth-child(2) {
+    gap: 1rem;
+  }
+  footer > :nth-child(1) > :nth-child(2) > :nth-child(2) h3 {
+    font-size: 22.5px;
+  }
+  footer > :nth-child(1) > :nth-child(2) > :nth-child(2) p, footer > :nth-child(1) > :nth-child(2) > :nth-child(2) a {
+    font-size: 16px;
+  }
+  footer > :nth-child(1) > :nth-child(2) > :nth-child(2) p br, footer > :nth-child(1) > :nth-child(2) > :nth-child(2) a br {
+    display: none;
+  }
+}
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin-top: 150px;
+  gap: 5rem;
+}
+footer > :nth-child(2) {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+footer > :nth-child(2) > :nth-child(1) {
+  width: 100%;
+}
+footer > :nth-child(2) > :nth-child(1) > :nth-child(1) img, footer > :nth-child(2) > :nth-child(1) > :nth-child(2) img {
+  width: 100%;
+}
+footer > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+  display: none;
+}
+footer > :nth-child(2) > :nth-child(2) {
+  position: absolute;
+  left: 1.25%;
+  bottom: 7.5%;
+}
+footer > :nth-child(2) > :nth-child(2) p {
+  all: unset;
+  font-size: 16px;
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #252525;
+}
+footer > :nth-child(2) > :nth-child(2) p a {
+  all: unset;
+  cursor: pointer;
+}
+
+@media (max-width: 710px) {
+  footer {
+    margin-top: 75px;
+    gap: 2.5rem;
+  }
+  footer > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+    display: none;
+  }
+  footer > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+    display: block;
+  }
+  footer > :nth-child(2) > :nth-child(2) p {
+    font-size: 17px;
   }
 }

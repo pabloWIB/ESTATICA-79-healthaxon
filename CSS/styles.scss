@@ -33,23 +33,103 @@ body{
 
 .getTop{
     position: fixed;
-    right: 1.5%;
-    bottom: 2%;
+    right: 2%;
+    bottom: 2.5%;
+    z-index: 20;
     border-radius: 50%;
-    background: #252525;
+    background: #B8B7B5;
     cursor: pointer;
     height: 30px;
     width: 30px;
-    display: flex;
+    flex-flow: column wrap;
     place-content: center;
     align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: .3s;
+    >a{
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        display: flex;
+        place-content: center;
+        align-content: center;
+        position: relative;
+        >div{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            place-content: center;
+            align-items: center;
+            div{
+                width: 100%;
+                max-width: 25px;
+                padding: .25rem;
+                border-radius: 50%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        >:nth-child(1){
+            z-index: 40;
+        }
+        >:nth-child(2){
+            background: $verde;
+            scale: 0;
+            div{
+                transform: translateY(100%);
+                scale: 1;
+            }
+        }
+    }
+}
+
+.getTop:hover{
+    >a{
+        >:nth-child(1){
+            scale: 0;
+            transition-delay: .1s;
+            div{
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        >:nth-child(2){
+            background: $verde;
+            scale: 1;
+            div{
+                transform: translateY(0%);
+            }
+        }
+    }
+}
+
+.animatioGetTop{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+    transition: .3s;
+}
+
+@media(max-width:710px){
+    .getTop{
+        display: none;
+    }
+    .animatioGetTop{
+        display: none;
+    }
 }
 
 // getTop ---
 
 // progress
 
-.progress {
+.progress{
     position: fixed;
     width: .5%;
     height: 100%;
@@ -942,3 +1022,189 @@ article{
 }
 
 // ARTICLE ---
+
+// FOOTER
+
+// FOOTER TOP
+
+footer{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 150px;
+    gap: 5rem;
+    >:nth-child(1){
+        margin: 0 auto;
+        width: 87.5%;
+        max-width: 1200px;
+        display: flex;
+        flex-flow: column nowrap;
+        position: relative;
+        >:nth-child(1){
+            width: 100%;
+            >:nth-child(1){
+                width: 100%;
+                video{
+                    width: 100%;
+                }
+            }
+            >:nth-child(2){
+                display: none;
+            }
+        }
+        >:nth-child(2){
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            gap: 2rem;
+            >:nth-child(1){
+                width: 100%;
+                max-width: 500px;
+                img{
+                    width: 100%;
+                }
+            }
+            >:nth-child(2){
+                display: flex;
+                flex-flow: column wrap;
+                gap: 1.5rem;
+                h3, p, a{
+                    all: unset;
+                    color: #252525;
+                }
+                h3{
+                    font-size: 32.5px;
+                }
+                p, a{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 17px;
+                }
+                a{
+                    cursor: pointer;
+                    color: $verde;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 710px){
+    footer{
+        display: flex;
+        flex-flow: column wrap;
+        gap: 5rem;
+        >:nth-child(1){
+            margin: 0 auto;
+            width: 87.5%;
+            max-width: 1200px;
+            display: flex;
+            flex-flow: column nowrap;
+            position: relative;
+            margin-top: 150px;
+            margin-bottom: 150px;
+            >:nth-child(1){
+                >:nth-child(1){
+                    display: none;
+                }
+            }
+            >:nth-child(2){
+                gap: 1rem;
+                >:nth-child(1){
+                    width: 100%;
+                    max-width: 300px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                >:nth-child(2){
+                    gap: 1rem;
+                    h3{
+                        font-size: 22.5px;
+                    }
+                    p, a{
+                        font-size: 16px;
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+// FOOTER TOP ---
+
+// FOOTER BOTTOM
+
+footer{
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 150px;
+    gap: 5rem;
+    >:nth-child(2){
+        width: 100%;
+        position: relative;
+        margin-top: 50px;
+        >:nth-child(1){
+            width: 100%;
+            >:nth-child(1), >:nth-child(2){
+                img{
+                    width: 100%;
+                }
+            }
+            >:nth-child(2){
+                display: none;
+            }
+        }
+        >:nth-child(2){
+            position: absolute;
+            left: 1.25%;
+            bottom: 7.5%;
+            p{
+                all: unset;
+                font-size: 16px;
+                cursor: default;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #252525;
+                a{
+                    all: unset;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 710px){
+    footer{
+        margin-top: 75px;
+        gap: 2.5rem;
+        >:nth-child(2){
+            >:nth-child(1){
+              
+                >:nth-child(1){
+                    display: none;
+                }
+                >:nth-child(2){
+                    display: block;
+                }
+            }
+            >:nth-child(2){
+                p{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+// FOOTER BOTTOM ---
+
+// FOOTER ---
