@@ -8,6 +8,24 @@ body {
   overflow: hidden;
 }
 
+.getTop {
+  position: fixed;
+  right: 1.5%;
+  bottom: 2%;
+  border-radius: 50%;
+  background: #252525;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .progress {
   position: fixed;
   width: 0.5%;
@@ -635,10 +653,22 @@ main {
 }
 main > :nth-child(1) {
   text-align: center;
+  opacity: 0%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
 }
 main > :nth-child(1) h3 {
   all: unset;
   font-size: 33.5px;
+}
+main .animationN2 {
+  -webkit-transition: 0.75s;
+  transition: 0.75s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+  opacity: 100;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 main > :nth-child(2) {
   display: -webkit-box;
@@ -655,7 +685,7 @@ main > :nth-child(2) {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  gap: 1.35rem;
+  gap: 1.5rem;
 }
 main > :nth-child(2) > div {
   background: #F8EBBF;
@@ -672,6 +702,9 @@ main > :nth-child(2) > div {
           flex: 1;
   text-align: center;
   padding: 2.5rem 0rem;
+  opacity: 0%;
+  -webkit-transform: translateY(25%);
+          transform: translateY(25%);
 }
 main > :nth-child(2) > div h3, main > :nth-child(2) > div p {
   all: unset;
@@ -684,6 +717,29 @@ main > :nth-child(2) > div p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: #252525;
+}
+main > :nth-child(2) > :nth-child(1) {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+main > :nth-child(2) > :nth-child(2) {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.65s;
+          transition-delay: 0.65s;
+}
+main > :nth-child(2) > :nth-child(3) {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.85s;
+          transition-delay: 0.85s;
+}
+main > :nth-child(2) .animationN3 {
+  opacity: 100%;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 @media (max-width: 900px) {
@@ -712,6 +768,273 @@ main > :nth-child(2) > div p {
     font-size: 50px;
   }
   main > :nth-child(2) > div p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 460px) {
+  main {
+    gap: 2rem;
+    margin-top: 50px;
+  }
+  main > :nth-child(1) h3 {
+    all: unset;
+    font-size: 18px;
+  }
+  main > :nth-child(2) > div {
+    gap: 1.25rem;
+    padding: 2rem 0rem;
+  }
+  main > :nth-child(2) > div h3 {
+    font-size: 40px;
+  }
+  main > :nth-child(2) > div p {
+    font-size: 16px;
+  }
+}
+aside {
+  width: 87.5%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: 0 auto;
+  margin-top: 150px;
+  gap: 5rem;
+}
+aside > :nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  text-align: center;
+  gap: 1.5rem;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0%;
+}
+aside > :nth-child(1) h2, aside > :nth-child(1) p {
+  all: unset;
+}
+aside > :nth-child(1) h2 {
+  font-size: 32.5px;
+}
+aside > :nth-child(1) p {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+aside .asideTxtAnim {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+article {
+  width: 87.5%;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5.5rem;
+  margin-top: 150px;
+}
+article > :nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 2rem;
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+article > :nth-child(1) h2, article > :nth-child(1) p {
+  all: unset;
+}
+article > :nth-child(1) h2 {
+  font-size: 32.5px;
+}
+article > :nth-child(1) p {
+  font-size: 18px;
+  color: #252525;
+  font-family: Arial, Helvetica, sans-serif;
+}
+article .articleTxtAnim {
+  opacity: 100;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+article > :nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 4.5rem;
+  width: 100%;
+}
+article > :nth-child(2) > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  gap: 2.5rem;
+}
+article > :nth-child(2) > div > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+article > :nth-child(2) > div > div > :nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.65rem;
+}
+article > :nth-child(2) > div > div > :nth-child(1) div {
+  width: 100%;
+  max-width: 25px;
+  border-radius: 50%;
+  background: #E6E2F8;
+  padding: 0.35rem;
+}
+article > :nth-child(2) > div > div > :nth-child(1) div img {
+  width: 100%;
+}
+article > :nth-child(2) > div > div h3, article > :nth-child(2) > div > div h5, article > :nth-child(2) > div > div p {
+  all: unset;
+}
+article > :nth-child(2) > div > div h3 {
+  font-size: 27px;
+}
+article > :nth-child(2) > div > div h5 {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+article > :nth-child(2) > div > div p {
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #252525;
+}
+article > :nth-child(2) > div > div:hover > :nth-child(1) div {
+  scale: 1.1;
+}
+article > :nth-child(2) > div .animationPeople {
+  opacity: 100;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-delay: 5s;
+          transition-delay: 5s;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 700px) {
+  article {
+    gap: 2.5rem;
+    margin-top: 75px;
+  }
+  article > :nth-child(1) {
+    gap: 1.5rem;
+  }
+  article > :nth-child(1) h2 {
+    font-size: 22.5px;
+  }
+  article > :nth-child(1) p {
+    font-size: 17px;
+  }
+  article > :nth-child(1) p br {
+    display: none;
+  }
+  article > :nth-child(2) {
+    gap: 2.5rem;
+  }
+  article > :nth-child(2) > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    gap: 3.5rem;
+  }
+  article > :nth-child(2) > div > div {
+    gap: 1.5rem;
+  }
+  article > :nth-child(2) > div > div > :nth-child(1) div {
+    max-width: 20px;
+  }
+  article > :nth-child(2) > div > div h3 {
+    font-size: 20px;
+  }
+  article > :nth-child(2) > div > div h5 {
+    font-size: 17px;
+  }
+  article > :nth-child(2) > div > div p {
     font-size: 16px;
   }
 }
