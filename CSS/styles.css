@@ -927,6 +927,45 @@ aside .asideTxtAnim {
   -webkit-transition: 1s;
   transition: 1s;
 }
+aside > :nth-child(2) {
+  background: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  height: 200vh;
+  position: relative;
+}
+aside > :nth-child(2) > :nth-child(1) {
+  -webkit-box-flex: 1.25;
+      -ms-flex: 1.25;
+          flex: 1.25;
+  background: red;
+  position: sticky;
+}
+aside > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+  width: 100%;
+}
+aside > :nth-child(2) > :nth-child(1) > :nth-child(1) video {
+  width: 100%;
+}
+aside > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+  width: 100%;
+  display: none;
+}
+aside > :nth-child(2) > :nth-child(1) > :nth-child(2) img {
+  width: 100%;
+}
+aside > :nth-child(2) > :nth-child(2) {
+  -webkit-box-flex: 0.75;
+      -ms-flex: 0.75;
+          flex: 0.75;
+  background: orange;
+}
 
 article {
   width: 87.5%;

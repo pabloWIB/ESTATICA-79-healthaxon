@@ -374,7 +374,6 @@ const people4 = document.getElementById('people4');
 const people5 = document.getElementById('people5');
 const people6 = document.getElementById('people6');
 const asideTxtAnim = document.getElementById('asideTxtAnim');
-const asideTxtAnim2 = document.getElementById('asideTxtAnim2');
 
 function scrollValue3() {
     var scroll = window.scrollY;
@@ -389,7 +388,6 @@ function scrollValue3() {
         people5.classList.remove('animationPeople');
         people6.classList.remove('animationPeople');
         asideTxtAnim.classList.remove('asideTxtAnim');
-        asideTxtAnim2.classList.remove('asideTxtAnim');
     } 
 }
 
