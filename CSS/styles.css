@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Libre Baskerville", serif;
   background: #F6F3F0;
@@ -928,7 +932,6 @@ aside .asideTxtAnim {
   transition: 1s;
 }
 aside > :nth-child(2) {
-  background: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -937,14 +940,16 @@ aside > :nth-child(2) {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   width: 100%;
-  height: 200vh;
   position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
 }
 aside > :nth-child(2) > :nth-child(1) {
-  -webkit-box-flex: 1.25;
-      -ms-flex: 1.25;
-          flex: 1.25;
-  background: red;
+  -webkit-box-flex: 1.15;
+      -ms-flex: 1.15;
+          flex: 1.15;
   position: sticky;
 }
 aside > :nth-child(2) > :nth-child(1) > :nth-child(1) {
@@ -961,12 +966,90 @@ aside > :nth-child(2) > :nth-child(1) > :nth-child(2) img {
   width: 100%;
 }
 aside > :nth-child(2) > :nth-child(2) {
-  -webkit-box-flex: 0.75;
-      -ms-flex: 0.75;
-          flex: 0.75;
-  background: orange;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 2rem;
+}
+aside > :nth-child(2) > :nth-child(2) > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 1.25rem;
+}
+aside > :nth-child(2) > :nth-child(2) > div h5, aside > :nth-child(2) > :nth-child(2) > div p {
+  all: unset;
+}
+aside > :nth-child(2) > :nth-child(2) > div h5 {
+  font-size: 25px;
+}
+aside > :nth-child(2) > :nth-child(2) > div p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  color: #252525;
 }
 
+@media (max-width: 910px) {
+  aside {
+    margin-top: 75px;
+    gap: 2.5rem;
+  }
+  aside > :nth-child(1) h2 {
+    font-size: 22.5px;
+  }
+  aside > :nth-child(1) p {
+    font-size: 17px;
+  }
+  aside > :nth-child(2) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    gap: 0.5rem;
+    margin-top: 75px;
+  }
+  aside > :nth-child(2) > :nth-child(1) {
+    width: 100%;
+  }
+  aside > :nth-child(2) > :nth-child(1) > :nth-child(1) {
+    display: none;
+  }
+  aside > :nth-child(2) > :nth-child(1) > :nth-child(2) {
+    display: block;
+  }
+  aside > :nth-child(2) > :nth-child(2) {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    gap: 2rem;
+    text-align: center;
+  }
+  aside > :nth-child(2) > :nth-child(2) > div {
+    gap: 1rem;
+  }
+  aside > :nth-child(2) > :nth-child(2) > div h5 {
+    font-size: 20px;
+  }
+  aside > :nth-child(2) > :nth-child(2) > div p {
+    font-size: 16px;
+  }
+}
 article {
   width: 87.5%;
   margin: 0 auto;

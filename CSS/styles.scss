@@ -11,7 +11,7 @@ $vainilla: #F8EBBF;
 // *
 
 *{
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 // * ---
@@ -864,15 +864,14 @@ aside{
         transition: 1s;
     }
     >:nth-child(2){
-        background: red;
         display: flex;
         flex-flow: row wrap;
         width: 100%;
-        height: 200vh;
         position: relative;
+        align-items: center;
+        gap: 5rem;
         >:nth-child(1){
-            flex: 1.25;
-            background: red;
+            flex: 1.15;
             position: sticky;
             >:nth-child(1){
                 width: 100%;
@@ -889,11 +888,78 @@ aside{
             }
         }
         >:nth-child(2){
-            flex: .75;
-            background: orange;
+            flex: .5;
+            display: flex;
+            flex-flow: column wrap;
+            gap: 2rem;
+            >div{
+                display: flex;
+                flex-flow: column wrap;
+                gap: 1.25rem;
+                h5, p{
+                    all: unset;
+                }
+                h5{
+                    font-size: 25px;
+                }
+                p{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 17px;
+                    color: #252525;
+                }
+            }
         }
     }
 }
+
+// MEDIA ASIDE
+
+@media (max-width: 910px){
+    aside{
+        margin-top: 75px;
+        gap: 2.5rem;
+        >:nth-child(1){
+            h2{
+                font-size: 22.5px;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+        >:nth-child(2){
+            flex-flow: column wrap;
+            gap: .5rem;
+            margin-top: 75px;
+            >:nth-child(1){
+                width: 100%;
+                >:nth-child(1){
+                  display: none;
+                }
+                >:nth-child(2){
+                    display: block;
+                }
+            }
+            >:nth-child(2){
+                flex: 1;
+                width: 100%;
+                flex-flow: row wrap;
+                gap: 2rem;
+                text-align: center;
+                >div{
+                    gap: 1rem;
+                    h5{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+// MEDIA ASIDE
 
 // ASIDE ---
 
@@ -1238,3 +1304,5 @@ footer{
 // FOOTER BOTTOM ---
 
 // FOOTER ---
+
+// TEST
