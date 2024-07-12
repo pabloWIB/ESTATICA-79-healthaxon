@@ -1,6 +1,6 @@
 <img src="IMG/102shots_so.jpeg" alt="">
 
-<h2 align="center">Página: <a href="https://healthaxon.surge.sh/"></a><span>healthaxon.com</span></h2>
+<h2 align="center">Página: <a href="https://healthaxon.surge.sh/">healthaxon.com</a></h2>
 
 <h2 >Tecnologías usadas👨🏻‍💻</h2>
 <br>
