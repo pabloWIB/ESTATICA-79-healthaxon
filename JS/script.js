@@ -54,13 +54,11 @@ $(function() {
         $("#toggleMenu").toggleClass("toggleMenuActive");
         $("#bodyID").toggleClass("bodyToggle");
         $("#navID").toggleClass("navIDtoggleMenuActive");
-        $("#progress").toggleClass("progressDeactivate");
     });
 
     function removeToggleClass() {
         $("#toggleMenu").removeClass("toggleMenuActive");
         $("#bodyID").removeClass("bodyToggle");
-        $("#progress").removeClass("progressDeactivate");
         $("#navID").toggleClass("navIDtoggleMenuActive");
     }
 
@@ -70,18 +68,6 @@ $(function() {
 });
 
 // MENU TOGGLE ---
-
-// PROGRESS BAR
-
-window.addEventListener('scroll', function() {
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrollPercentage = (scrollTop / docHeight) * 100;
-    const progressBar = document.getElementById('progress-bar');
-    progressBar.style.height = scrollPercentage + '%';
-});
-
-// PROGRESS BAR ---
 
 // VIEWPORT FUNCTION
 
